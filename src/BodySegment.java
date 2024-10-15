@@ -1,6 +1,7 @@
 
 public class BodySegment {
 	double radius;
+	double maxCurvature; //minimum radius of the body segment in relation to others 
 	Vector2d pose;
 	public BodySegment() {
 		radius = 10;

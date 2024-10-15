@@ -12,7 +12,7 @@ public class Worm {
 	
 	public Worm() {
 		segments = new ArrayList<BodySegment>();
-		maxAngle = Math.toRadians(5); //will never be used -> max is 180
+		maxAngle = Math.toRadians(30); //will never be used -> max is 180
 		for (int i = 0; i < 100; i ++) {
 			segments.add(new BodySegment(10, new Vector2d(i,0)));
 		}
@@ -35,7 +35,7 @@ public class Worm {
 				}
 				if (Math.abs(ang) > maxAngle) { //This is checking that we have it bundled up weird
 					double rot = Math.signum(ang)*(maxAngle - Math.abs(ang)); //this is the amount we would have to rotate it to not violate the angle constraints
-					segments.get(i).updateAngleConstraint(segments.get(i-1), rot);
+					segments.get(i+1).updateAngleConstraint(segments.get(i), -rot);
 				}
 			}
 		}
