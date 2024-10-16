@@ -17,7 +17,7 @@ public class Arm {
 	}
 	
 	public void update(Vector2d start, Vector2d end) {
-		//System.out.println(start.x + " " + start.y + ", " + end.x + " " + end.y);
+		//Need to add relative angle constraints to this to avoid weird elbows
 		int size = arm.size();
 		if (size == 0) {
 			return;

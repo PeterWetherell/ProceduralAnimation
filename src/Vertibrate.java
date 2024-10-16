@@ -21,10 +21,10 @@ public class Vertibrate {
 		
 
 		ArrayList<Double> lengths = new ArrayList<Double>();
-		lengths.add(50.0);
-		lengths.add(35.0);
+		lengths.add(55.0);
+		lengths.add(40.0);
 		//add legs at index 7 and 17
-		segments.set(7, new ArmSegment(segments.get(7), new Vector2d(-30,60), 500, lengths)); //70
+		segments.set(7, new ArmSegment(segments.get(7), new Vector2d(-30,60), 70, lengths));
 		segments.set(17, new ArmSegment(segments.get(17), new Vector2d(-30,60), 70, lengths));
 	}
 	
