@@ -14,7 +14,7 @@ import javax.swing.Timer;
 public class Display extends JPanel implements MouseListener, ActionListener, KeyListener, MouseMotionListener {
 	JFrame frame;
 	Timer timer;
-	Worm test = new Worm();
+	Vertibrate test = new Vertibrate();
 	
 	public static void main(String[] args) {
 		Display d = new Display();

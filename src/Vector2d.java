@@ -29,4 +29,8 @@ public class Vector2d {
 		return new Vector2d(x*Math.cos(ang) - y*Math.sin(ang), x*Math.sin(ang) + y*Math.cos(ang));
 	}
 	
+	public Vector2d copy() {
+		return new Vector2d(x, y);
+	}
+	
 }

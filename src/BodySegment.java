@@ -1,3 +1,5 @@
+import java.awt.Color;
+import java.awt.Graphics;
 
 public class BodySegment {
 	double radius;
@@ -22,5 +24,10 @@ public class BodySegment {
 	public void updateAngleConstraint(BodySegment b, double ang) {
 		Vector2d l = pose.subtract(b.pose);
 		pose = b.pose.add(l.rotate(ang));
+	}
+	
+	public void draw(Graphics g) {
+		g.setColor(Color.black);
+		g.drawOval((int)(pose.x-radius),(int)(pose.y-radius),(int)(2*radius),(int)(2*radius));
 	}
 }
